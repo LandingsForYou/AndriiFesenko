@@ -274,10 +274,13 @@ body {
   position: relative;
   background: #0b0b0c url("img/Andrii.png") center center / cover no-repeat;
   overflow: hidden;
-  min-height: 70vh;
-  padding: 30px 0 90px;
+  min-height: 100vh;
+  padding: 30px 0 0;
   color: #f5f2eb;
   background-position: -40% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero__overlay {
@@ -297,15 +300,16 @@ body {
 .hero__container {
   position: relative;
   z-index: 2;
-  margin: 0 auto;
+  margin: 0 60px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 60px 40px;
+  padding: 60px 0;
+  margin-top: 20vh;
 }
 
 .hero__content {
-  width: 60vw;
+  max-width: 900px;
 }
 
 .hero__topline {
@@ -689,7 +693,7 @@ body {
 }
 
 .tour__text p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: rgba(245, 242, 235, 0.85);
 }
@@ -1285,9 +1289,8 @@ body {
 ========================= */
 
 .tour-support {
-  padding: 56px 0 110px;
+  padding: 56px 0 20px;
   border-top: 1px solid rgba(212, 175, 106, 0.14);
-  border-bottom: 1px solid rgba(212, 175, 106, 0.14);
   margin-bottom: 0;
 }
 
@@ -1305,15 +1308,14 @@ body {
 
 .tour-support__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: 80px;
-  align-items: start;
+  align-items: center;
 }
 
 .tour-support__content {
   display: grid;
   gap: 20px;
-  max-width: 520px;
 }
 
 .tour-support__content p {
@@ -1439,6 +1441,7 @@ body {
   line-height: 1.24 !important;
   font-weight: 700;
   color: #d4af6a !important;
+  margin-bottom: 30px;
 }
 
 .contacts-hero__actions {
@@ -1556,7 +1559,7 @@ body {
   /* HERO */
   .hero {
     min-height: auto;
-    padding: 22px 0 52px;
+    padding: 22px 0 0;
     background-position: center center;
   }
 
@@ -1968,11 +1971,16 @@ body {
 
   /* HERO */
   .hero {
-    padding: 18px 0 38px;
+    padding: 18px 0 0;
+    min-height: calc(80vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   .hero__container {
     padding: 34px 18px 12px;
+    margin: 0;
   }
 
   .hero__content {
@@ -1980,9 +1988,10 @@ body {
   }
 
   .hero__title {
-    font-size: 34px;
-    line-height: 1.08;
+    font-size: 37px;
+    line-height: 1.2;
     margin-bottom: 18px;
+    padding-right: 20vw;
   }
 
   .hero__subtitle {
@@ -2098,9 +2107,13 @@ body {
   /* TOUR */
   .tour__lead,
   .tour-story__lead {
-    font-size: 24px;
-    line-height: 1.24;
+    font-size: 21px;
+    line-height: 1.3;
     margin-bottom: 18px;
+    font-weight: 100;
+    color: rgba(245, 242, 235, 0.84);
+
+    font-family: "Inter", sans-serif;
   }
 
   .tour__text,
@@ -2727,5 +2740,155 @@ body.menu-open {
 @media (min-width: 992px) {
   .mobile-menu {
     display: none !important;
+  }
+}
+
+.artist__signature {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist__signature span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.artist__signature strong {
+  font-size: 24px;
+  font-weight: 400;
+  color: #b89252;
+}
+
+/* =========================
+   POSTER SECTION
+========================= */
+
+.poster {
+  position: relative;
+  background: #0b0b0c;
+  padding: 120px 0 140px;
+}
+
+.poster__head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.poster__head .section-kicker {
+  display: block;
+  text-align: center;
+}
+
+.poster__head .section-title {
+  text-align: center;
+}
+
+.poster__frame {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(212, 175, 106, 0.22);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.poster__frame::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(212, 175, 106, 0.28);
+  pointer-events: none;
+}
+
+.poster__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.poster__bottom {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.poster__note {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #f5f2eb;
+  text-align: center;
+}
+
+.poster__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 34px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.poster__btn:hover {
+  background: var(--accent);
+  color: #0b0b0c;
+  box-shadow: 0 0 24px rgba(212, 175, 106, 0.18);
+}
+
+@media (max-width: 991px) {
+  .poster {
+    padding: 90px 0 100px;
+  }
+
+  .poster__frame {
+    max-width: 680px;
+    padding: 18px;
+  }
+
+  .poster__note {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .poster {
+    padding: 70px 0 80px;
+  }
+
+  .poster__head {
+    margin-bottom: 32px;
+  }
+
+  .poster__frame {
+    padding: 12px;
+  }
+
+  .poster__note {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .poster__btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 48px;
+    padding: 0 20px;
+    text-align: center;
   }
 }
