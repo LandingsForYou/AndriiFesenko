@@ -2,9 +2,7 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <title>Андрій Фесенко — Акордеон за мир в Україні</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -730,6 +728,148 @@
         </div>
       </div>
     </section>
+    <div class="contacts__legal">
+      <div class="contacts__legal-line"></div>
+
+      <div class="contacts__legal-row">
+        <p class="contacts__copyright">© 2026 Andrii Fesenko</p>
+
+        <div class="contacts__legal-links">
+          <button
+            type="button"
+            class="contacts__legal-link"
+            data-modal-open="impressumModal"
+          >
+            Impressum
+          </button>
+
+          <span class="contacts__legal-dot">·</span>
+
+          <button
+            type="button"
+            class="contacts__legal-link"
+            data-modal-open="datenschutzModal"
+          >
+            Datenschutz
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="impressumModal" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="impressumTitle"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Schließen"
+          data-modal-close
+        >
+          ×
+        </button>
+
+        <div class="modal__content">
+          <p class="modal__kicker">Rechtliche Information</p>
+          <h3 class="modal__title" id="impressumTitle">Impressum</h3>
+
+          <div class="modal__text">
+            <p>
+              Verantwortlich für den Inhalt dieser Website im Auftrag von Andrii
+              Fesenko:
+            </p>
+
+            <p>
+              Nataliia Riznyk<br />
+              Neugasshohl 6<br />
+              61350 Bad Homburg<br />
+              Deutschland
+            </p>
+
+            <p>
+              E-Mail:
+              <a href="mailto:nataliariznyk@gmail.com"
+                >nataliariznyk@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="datenschutzModal" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="datenschutzTitle"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Schließen"
+          data-modal-close
+        >
+          ×
+        </button>
+
+        <div class="modal__content">
+          <p class="modal__kicker">Datenschutz</p>
+          <h3 class="modal__title" id="datenschutzTitle">
+            Datenschutzerklärung
+          </h3>
+
+          <div class="modal__text">
+            <p>
+              Diese Website dient ausschließlich der Bereitstellung von
+              Informationen.
+            </p>
+
+            <p>
+              Es werden keine personenbezogenen Daten aktiv erhoben oder
+              gespeichert.
+            </p>
+
+            <p>
+              Beim Besuch der Website können durch den Hosting-Anbieter
+              automatisch technische Daten (z. B. IP-Adresse, Browsertyp, Datum
+              und Uhrzeit des Zugriffs) erfasst werden. Diese Daten dienen
+              ausschließlich der technischen Bereitstellung und Sicherheit der
+              Website.
+            </p>
+
+            <p>
+              Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Angaben
+              ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht
+              an Dritte weitergegeben.
+            </p>
+
+            <p>
+              Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder
+              Löschung Ihrer Daten.
+            </p>
+
+            <p>
+              Bei Fragen zum Datenschutz können Sie uns unter folgender
+              E-Mail-Adresse kontaktieren:
+            </p>
+
+            <p>
+              E-Mail:
+              <a href="mailto:nataliariznyk@gmail.com"
+                >nataliariznyk@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

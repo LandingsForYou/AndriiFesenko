@@ -88,3 +88,53 @@ if (burger && mobileMenu) {
     });
   });
 }
+
+const modalOpenButtons = document.querySelectorAll("[data-modal-open]");
+const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
+const modals = document.querySelectorAll(".modal");
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function closeModal(modal) {
+  if (!modal) return;
+
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+modalOpenButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    openModal(button.dataset.modalOpen);
+  });
+});
+
+modalCloseButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    closeModal(button.closest(".modal"));
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const activeModal = document.querySelector(".modal.active");
+    if (activeModal) {
+      closeModal(activeModal);
+    }
+  }
+});
