@@ -2928,7 +2928,7 @@ body.menu-open {
 .contacts__legal-link {
   font-size: 18px;
   line-height: 1.4;
-  color: #f5f2eb;
+  color: rgba(255, 255, 255, 0.3);
   transition:
     color 0.3s ease,
     opacity 0.3s ease;
