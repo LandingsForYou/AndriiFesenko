@@ -3136,3 +3136,40 @@ body.modal-open {
     font-size: 24px;
   }
 }
+
+.lang-switch {
+  display: flex;
+}
+
+.lang-btn {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 0 3px;
+}
+
+.lang-btn:hover {
+  color: var(--accent);
+}
+
+.lang-btn.active {
+  color: var(--accent);
+}
+
+@media (max-width: 1260px) {
+  .logo__name {
+    font-size: 30px;
+  }
+  .logo__line {
+    width: 40px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .nav-link {
+    font-size: 15px;
+  }
+}

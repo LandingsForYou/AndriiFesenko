@@ -62,11 +62,15 @@ document.querySelectorAll("[data-expand]").forEach((block) => {
 
   if (!button) return;
 
+  const moreText = button.dataset.more;
+  const lessText = button.dataset.less;
+
   button.addEventListener("click", () => {
     block.classList.toggle("active");
+
     button.textContent = block.classList.contains("active")
-      ? "Сховати"
-      : "Читати більше";
+      ? lessText
+      : moreText;
   });
 });
 

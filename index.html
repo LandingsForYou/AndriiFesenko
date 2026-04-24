@@ -44,6 +44,11 @@
         <div class="header__actions">
           <a href="#" class="header__btn">Контакти</a>
 
+          <div class="lang-switch">
+            <a href="index.html" class="lang-btn active">UA /</a>
+            <a href="de.html" class="lang-btn">DE</a>
+          </div>
+
           <button class="burger" id="burger">
             <span></span>
           </button>
@@ -222,7 +227,12 @@
             </div>
 
             <div class="artist__actions">
-              <button class="artist__toggle" type="button">
+              <button
+                class="artist__toggle"
+                type="button"
+                data-more="Читати більше"
+                data-less="Сховати"
+              >
                 Читати більше
               </button>
             </div>
@@ -385,7 +395,14 @@
               </p>
             </div>
             <div class="album__actions">
-              <button class="album__toggle" type="button">Читати більше</button>
+              <button
+                class="album__toggle"
+                type="button"
+                data-more="Читати більше"
+                data-less="Сховати"
+              >
+                Читати більше
+              </button>
             </div>
           </div>
 
